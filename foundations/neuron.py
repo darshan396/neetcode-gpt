@@ -15,11 +15,8 @@ class Solution:
         # return round(your_answer, 5)
         z = (w@x.T) + b
         if activation == "sigmoid":
-            y = 1/(1 + np.exp(-z)).astype(float)
-            return round(y,5)
+            return round(1/(1 + np.exp(-z)).astype(float),5)
         else:
-            y = max(0,z)
-            y =  float(y)
-            return round(y,5)
+            return round(float(max(0,z)),5)
 
         pass
